@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruits - Zean Crew</title>
+<style>
+body { font-family:'Segoe UI', sans-serif; margin:0; padding:0; background:#f2f5f7; color:#333;}
+header { background: linear-gradient(90deg,#4b6cb7,#182848); color:#fff; padding:25px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+header h1 { margin:0; font-size:2rem; text-shadow:1px 1px 2px #000;}
+nav { margin-top:15px; }
+nav a { margin:0 15px; color:#fff; text-decoration:none; font-weight:bold; transition:0.3s;}
+nav a:hover { color:#ffdd57;}
+.products { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; padding:25px;}
+.product { background:#fff; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:center; transition:0.3s;}
+.product:hover { transform:translateY(-5px); box-shadow:0 12px 25px rgba(0,0,0,0.15);}
+.product h3 { margin:15px 0; font-size:1.3rem;}
+.product p { font-weight:bold; margin-bottom:15px;}
+button { display:inline-block; margin:5px 5px 0 0; padding:10px 18px; background:#28a745; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s;}
+button:hover { background:#1e7e34; transform:scale(1.05);}
+footer { background:#182848; color:#fff; text-align:center; padding:15px; margin-top:30px;}
+</style>
+</head>
+<body>
+<header>
+<h1>🍇 Fruits (Physical)</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="robux.html">Robux</a>
+<a href="fruits.html">Fruits</a>
+<a href="bloxfruit.html">Bloxfruit Accounts</a>
+</nav>
+</header>
+
+<section class="products">
+<!-- Dragon -->
+<div class="product">
+<h3>🐉 Dragon (West/East)</h3>
+<p>Price: $20 / ₹1660 / NPR 2500</p>
+<button class="paypal-btn" data-amount="20">PayPal</button>
+<button class="esewa-btn" data-amount="2500">eSewa</button>
+<button class="ime-btn" data-amount="2500">Global IME</button>
+<button class="paytm-btn" data-amount="1660">Paytm/Fampay</button>
+</div>
+
+<!-- Kitsune -->
+<div class="product">
+<h3>🦊 Kitsune</h3>
+<p>Price: $10 / ₹830 / NPR 1250</p>
+<button class="paypal-btn" data-amount="10">PayPal</button>
+<button class="esewa-btn" data-amount="1250">eSewa</button>
+<button class="ime-btn" data-amount="1250">Global IME</button>
+<button class="paytm-btn" data-amount="830">Paytm/Fampay</button>
+</div>
+
+<!-- Yeti -->
+<div class="product">
+<h3>🦍 Yeti</h3>
+<p>Price: $7 / ₹581 / NPR 875</p>
+<button class="paypal-btn" data-amount="7">PayPal</button>
+<button class="esewa-btn" data-amount="875">eSewa</button>
+<button class="ime-btn" data-amount="875">Global IME</button>
+<button class="paytm-btn" data-amount="581">Paytm/Fampay</button>
+</div>
+</section>
+
+<script>
+// PayPal
+document.querySelectorAll('.paypal-btn').forEach(btn=>{btn.addEventListener('click',()=>{window.open(`https://www.paypal.me/bimashtamang50/${btn.dataset.amount}`,'_blank');});});
+// eSewa
+document.querySelectorAll('.esewa-btn').forEach(btn=>{btn.addEventListener('click',()=>{window.open(`https://esewa.com.np/#/home?amt=${btn.dataset.amount}`,'_blank');});});
+// Global IME
+document.querySelectorAll('.ime-btn').forEach(btn=>{btn.addEventListener('click',()=>{const account="31607010017080"; const accountName="Bimash Tamang"; window.open(`https://www.globalimebank.com/payment?acct=${account}&name=${accountName}&amt=${btn.dataset.amount}`,'_blank');});});
+// Paytm/Fampay
+document.querySelectorAll('.paytm-btn').forEach(btn=>{btn.addEventListener('click',()=>{window.open(`https://paytm.com/merchant-pay?amount=${btn.dataset.amount}`,'_blank');});});
+</script>
+
+<footer>
+<p>&copy; 2025 Zean Crew Store | All Rights Reserved</p>
+</footer>
+</body>
+</html>
